@@ -4,7 +4,9 @@
   "description": "Interest Calculator",
   "main": "src/index.js",
   "scripts": {
-    "build": ""
+    "build": "rm -rf build && NODE_ENV=production webpack --config webpack.config-prod.js -p --progress",
+    "build-dev": "rm -rf public && NODE_ENV=development webpack --progress",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.config-dev.js"
   },
   "keywords": [],
   "author": "John Paul<jp@pauldm.com>",
@@ -22,7 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
